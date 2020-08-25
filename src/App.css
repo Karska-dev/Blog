@@ -24,12 +24,12 @@ h3, h4 {
 }
 
 nav {
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid #C44FEA;
   text-align: center;
   position: fixed;
   top: 0;
   width: 100%;
-  background: white;
+  background: #262A33;
 }
 
 nav ul {
@@ -46,14 +46,14 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: #D5CED9;
   font-weight: bold;
   padding: 16px 32px;
 }
 
 nav a:hover {
-  background: black;
-  color: white;
+  background: #FEE66E;
+  color: #262A33;
 }
 
 #page-body {

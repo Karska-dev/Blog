@@ -2,7 +2,7 @@ import React from 'react';
 
 const ArticlesList = () => (
   <>
-    <h1>ArticlesList</h1>
+    <h1>Articles List</h1>
     
   </>
 );
