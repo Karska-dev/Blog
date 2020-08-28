@@ -1,28 +1,14 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-
-const articlesInfo = {
-  'alpha': {
-    upvotes: 0,
-    comments: [],
-  },
-  'betta': {
-    upvotes: 0,
-    comments: [],
-  },
-  'gamma': {
-    upvotes: 0,
-    comments: [],
-  },
-  'delta': {
-    upvotes: 0,
-    comments: [],
-  }
-}
+import { MongoClient } from 'mongodb'
 
 const app = express();
 
 app.use(bodyParser.json());
+
+app.get('api/articles/:name', (req, res) => {
+  const articleName = req.params.name;
+})
 
 app.post('/api/articles/:name/upvote', (req, res) => {
   const articleName = req.params.name;
