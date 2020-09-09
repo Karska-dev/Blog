@@ -12,4 +12,17 @@ http://localhost:8000/
 
 ## MongoDB
 
-mongo
+To run MongoDB (i.e. the mongod process) as a macOS service, issue the following:
+
+brew services start mongodb-community@4.4
+
+To stop a mongod running as a macOS service, use the following command as needed:
+
+brew services stop mongodb-community@4.4
+
+To run MongoDB (i.e. the mongod process) manually as a background process, issue the following:
+
+mongod --config /usr/local/etc/mongod.conf --fork
+
+To stop a mongod running as a background process, connect to the mongod from the mongo shell, and issue the shutdown command as needed.
+

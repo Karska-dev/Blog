@@ -18,11 +18,11 @@ const withDB = async (operations, res) => {
     res.status(500).json({ message: 'Error connecting to db', error });
   }
 }
-
+/* 
 app.get('/', function (req, res) {
   res.send('Hello world! It\'s a backend server for blog')
 });
-
+ */
 app.get('/api/articles/:name', async (req, res) => {
   withDB(async (db) => {
     const articleName = req.params.name;
@@ -43,6 +43,7 @@ app.post('/api/articles/:name/upvote', async (req, res) => {
       },
     });
     const updatedArticleInfo = await db.collection('articles').findOne({ name: articleName });
+
     res.status(200).json(updatedArticleInfo);
   }, res)
 });
@@ -59,6 +60,7 @@ app.post('/api/articles/:name/add-comment', (req, res) => {
       },
     });
     const updatedArticleInfo = await db.collection('articles').findOne({ name: articleName });
+    
     res.status(200).json(updatedArticleInfo);
   }, res);
 });
